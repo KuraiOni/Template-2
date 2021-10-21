@@ -1,7 +1,9 @@
 /* Start Variables  */
 :root {
     --main-color: #19c8fa;
-    --transparent-color: rgb(15 116 143 / 70%)
+    --transparent-color: rgb(15 116 143 / 70%);
+    --bright-text-color: #777;
+    --section-padding: 60px;
 }
 /* End Variables  */
 /* Start Global Rules */
@@ -14,7 +16,6 @@
 }
 html {
     scroll-behavior: smooth;
-    background-color: black;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -47,6 +48,47 @@ ul {
 }
 }
 /* End Global Rules */
+/* Start Components  */
+.special-heading {
+    text-align: center;
+}
+.special-heading h2 {    
+    font-weight: normal;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    position: relative;
+}
+.special-heading h2::before {    
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30px;
+    background-color: #333;
+}
+.special-heading h2::after {    
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #333;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -38px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+}
+.special-heading p {    
+    color: var(--bright-text-color);
+    line-height: 2;
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+}
+/* End Components  */
 /* Start Header  */
 header {
     position: absolute;
@@ -224,3 +266,51 @@ header .container nav .form i {
     border-color: var(--main-color);
 }
 /* End Landing */
+/* Start Services */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+@media (min-width: 768px) {
+    .services .service-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
+        max-width: 100%;
+        width: 100%;
+}
+}
+.services .serv {
+    display: flex;
+    /* text-align: center; */
+}
+@media (max-width: 767px) {
+    .services .serv {
+        flex-direction: column;
+    }
+}
+.services .service-content .serv-i {
+    font-size: 50px;
+    color: #333;
+    padding: 0 80px;
+}
+@media (max-width: 767px) {
+    .services .service-content .serv-i {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .services .service-content .serv-info {
+        text-align: center;
+    }
+}
+.services .service-content .serv-info h3 {
+    padding-bottom: 20px;
+    font-size: 21px;
+    color: var(--main-color);
+    font-weight: normal;
+}
+.services .service-content .serv-info p {
+    line-height: 2;
+    padding-bottom: 60px;
+    color: var(--bright-text-color);
+}
+/* End Services */
