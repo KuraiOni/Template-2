@@ -531,3 +531,160 @@ header .container nav .form i {
     }
 }
 /* End About */
+/* Start Statistic */
+.statistic {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../img/kaneki.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.statistic::before {
+    content: "";
+    background-color: rgb(0 0 0 / 60%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.statistic .container {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.statistic .status {
+    background-color: var(--transparent-color);
+    padding: 50px;
+} 
+@media (max-width: 767px) {
+    .statistic .status {
+        flex-basis: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .statistic .status {
+        flex-basis: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .statistic .status {
+        flex-basis: 25%;
+    }
+}
+.statistic .status i {
+    color: white;
+    margin-bottom: 10px;
+}
+.statistic .status .number1 {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.statistic .status p {
+    font-size: 13px;
+    color: white;
+}
+/* End Statistic */
+/* Start Skills */
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.skills .skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    /* grid-gap: 10px; */
+}
+@media (max-width: 991px) {
+    .skills .skills-content {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
+    }
+}
+.skills .skills-content {
+    text-align: center;
+}
+.skills .skills-content h3 {
+    font-weight: normal;
+    margin: 30px 0;
+}
+.skills .skills-content p {
+    font-size: 13px;
+    color: var(--bright-text-color);
+    line-height: 1.8 ;
+    max-width: 100%;
+}
+.skills .skills-content .testimonials {
+    padding-right: 50px;
+    width: 500px;
+}
+.skills .skills-content .testimonials .profile-section .prof {
+    display: flex;
+    position: relative;
+}
+.skills .skills-content .testimonials .profile-section .prof img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin: 30px;
+}
+.skills .skills-content .testimonials .profile-section .prof img.homura {
+    margin-right: 45px;
+    height: 117px;
+}
+.skills .skills-content .testimonials ul {
+    display: flex;
+    position: absolute;
+    left: 283px;
+}
+.skills .skills-content .testimonials ul li {
+    border: 1px solid var(--bright-text-color);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+}
+.skills .skills-content .testimonials ul li.active {
+    background-color: var(--main-color);
+    border: none;
+}
+.skills .skills-content .testimonials .profile-section .prof .text {
+    margin: 30px;
+    text-align: left;
+    position: relative;
+}
+.skills .skills-content .testimonials .profile-section .prof .text p {
+    line-height: 1.6;
+    color: black;
+    max-width: 100%;
+}
+.skills .skills-content .testimonials .profile-section .prof .text span {
+    position: absolute;
+    right: 0;
+    font-size: 10px;
+}
+.skills .skills-content .testimonials .profile-section .prof .text::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid var(--bright-text-color);
+}
+.skills .skills-content .own-skills {
+    width: 500px;
+    padding-left: 50px;
+}
+.skills .skills-content .own-skills .skills-stats {
+    margin: 30px;
+    text-align: left;
+}
+/* End Skills */
