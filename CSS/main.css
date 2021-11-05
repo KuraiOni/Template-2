@@ -662,6 +662,7 @@ header .container nav .form i {
     display: flex;
     position: absolute;
     left: 283px;
+    margin-top: 20px;
 }
 .skills .skills-content .testimonials ul li {
     border: 1px solid var(--bright-text-color);
