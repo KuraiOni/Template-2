@@ -621,7 +621,7 @@ header .container nav .form i {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     /* grid-gap: 10px; */
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .skills .skills-content {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
     }
@@ -642,10 +642,29 @@ header .container nav .form i {
 .skills .skills-content .testimonials {
     padding-right: 50px;
     width: 500px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .skills .skills-content .testimonials {
+        max-width: 100%;
+        padding-right: 0px;
+    }
+}
+@media (max-width: 992px) {
+    .skills .skills-content .testimonials {
+        margin: 0 auto;
+        padding: 0;
+    }
 }
 .skills .skills-content .testimonials .profile-section .prof {
     display: flex;
     position: relative;
+}
+@media (max-width: 767px) {
+    .skills .skills-content .testimonials .profile-section .prof {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .skills .skills-content .testimonials .profile-section .prof img {
     width: 110px;
@@ -660,10 +679,17 @@ header .container nav .form i {
 }
 .skills .skills-content .testimonials ul {
     display: flex;
-    position: absolute;
-    left: 283px;
+    /* position: absolute;
+    left: 283px; */
+    justify-content: center;
     margin-top: 20px;
 }
+/* @media (max-width: 974px) {
+    .skills .skills-content .testimonials ul {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+} */
 .skills .skills-content .testimonials ul li {
     border: 1px solid var(--bright-text-color);
     border-radius: 50%;
@@ -690,7 +716,7 @@ header .container nav .form i {
     right: 0;
     font-size: 10px;
 }
-.skills .skills-content .testimonials .profile-section .prof .text::after{
+.skills .skills-content .testimonials .profile-section .prof .text::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -698,9 +724,27 @@ header .container nav .form i {
     height: 1px;
     border-bottom: 1px solid var(--bright-text-color);
 }
+@media (max-width: 767px) {
+    .skills .skills-content .testimonials .profile-section .prof .text::after {
+        bottom: -20px;
+    }
+}
 .skills .skills-content .own-skills {
     width: 500px;
     padding-left: 50px;
+}
+@media (max-width: 767px) {
+    .skills .skills-content .own-skills {
+        max-width: 100%;
+        padding-left: 0;
+        padding-top: 40px;
+    }
+}
+@media (max-width: 992px) {
+    .skills .skills-content .own-skills {
+        margin: 0 auto;
+        padding: 0;
+    }
 }
 .skills .skills-content .own-skills .skills-stats {
     margin: 30px;
