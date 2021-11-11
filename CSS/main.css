@@ -847,3 +847,106 @@ header .container nav .form i {
     left: 85%;
 }
 /* End Skills */
+/* Start Quote */
+.quote {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-image: url(../img/blue\ flames.jpg);
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+.quote::before {
+    background-color: rgb(0 0 0 / 40%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+.quote .container {
+    position: relative;
+}
+.quote q {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.quote q::before {
+    font-family: "Font Awesome 5 free";
+    quotes: \f10e;
+}
+.quote q::after {
+    font-family: "Font Awesome 5 free";
+    quotes: \f10d;
+}
+.quote p {
+    margin-top: 20px;
+}
+/* End Quote */
+/* Start Pricing */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding); 
+}
+.pricing .pricing-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+/* @media (max-width: 992px) {
+    .pricing .pricing-content {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+} */
+.pricing .pricing-content .pricing-box {
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+.pricing .pricing-content .pricing-box .sub-price {
+    border-bottom: 1px solid var(--main-color);
+    padding: 0 80px 20px;
+    position: relative;
+}
+.pricing .pricing-content .pricing-box .sub-price sup {
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 37px;
+    left: 62px
+}
+.pricing .pricing-content .pricing-box .sub-price span {
+    font-size: 60px;
+}
+.pricing .pricing-content .pricing-box .sub-price sub {
+    font-weight: bold;
+}
+.pricing .pricing-content .pricing-box > p {
+    padding: 20px 0; 
+    position: relative;
+}
+.pricing .pricing-content .pricing-box > p:last-child {
+    padding-bottom: 0;
+}
+.pricing .pricing-content .pricing-box > p:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 50%; 
+    height: 0;
+    border-bottom: 1px solid var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+}
+.pricing .pricing-content .price a {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    border: 1px solid var(--main-color);
+    color: black;
+}
+/* End Pricing */
